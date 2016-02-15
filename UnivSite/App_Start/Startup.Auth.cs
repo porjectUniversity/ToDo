@@ -54,9 +54,9 @@ namespace UnivSite
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "592309000933221",
+               appSecret: "2db81b82484f6cd758998fefe638a170");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
