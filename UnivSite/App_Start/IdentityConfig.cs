@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using UnivSite.Models;
+using System.Net.Mail;
 
 namespace UnivSite
 {
@@ -18,8 +19,32 @@ namespace UnivSite
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Подключите здесь службу электронной почты для отправки сообщения электронной почты.
-            return Task.FromResult(0);
+            var from = "polshuk1997@gmail.com";
+            var pass = "dima1997";
+
+            // адрес и порт smtp-сервера, с которого мы и будем отправлять письмо
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential(from, pass);
+            
+            // создаем письмо: message.Destination - адрес получателя
+            var mail = new MailMessage(from, message.Destination);
+
+            try
+            {
+                mail.Subject = message.Subject;
+                mail.Body = message.Body;
+                mail.IsBodyHtml = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not send e-mail. Exception caught: " + e);
+            }
+
+            return client.SendMailAsync(mail);
         }
     }
 
