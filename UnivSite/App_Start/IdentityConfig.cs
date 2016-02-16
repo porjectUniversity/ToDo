@@ -32,17 +32,9 @@ namespace UnivSite
             
             // создаем письмо: message.Destination - адрес получателя
             var mail = new MailMessage(from, message.Destination);
-
-            try
-            {
-                mail.Subject = message.Subject;
-                mail.Body = message.Body;
-                mail.IsBodyHtml = true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Could not send e-mail. Exception caught: " + e);
-            }
+            mail.Subject = message.Subject;
+            mail.Body = message.Body;
+            mail.IsBodyHtml = true;
 
             return client.SendMailAsync(mail);
         }
