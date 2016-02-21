@@ -272,6 +272,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Home\Calender.cshtml" />
+    <Content Include="Views\Home\Lists.cshtml" />
+    <Content Include="Views\Home\Goals.cshtml" />
+    <Content Include="Views\Home\Achievements.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

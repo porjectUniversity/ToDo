@@ -12,25 +12,26 @@ namespace UnivSite.Controllers
     {
         public ActionResult Index()
         {
-            List<ApplicationUser> users = new List<ApplicationUser>();
-            using (ApplicationContext db = new ApplicationContext())
-            {
-                users = db.Users.ToList();
-            }
-            return View(users);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Calender()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult Lists()
+        {
+            return View();
+        }
+
+        public ActionResult Goals()
+        {
+            return View();
+        }
+
+        public ActionResult Achievements()
+        {
             return View();
         }
     }
