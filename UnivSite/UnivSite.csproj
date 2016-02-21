@@ -214,6 +214,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\icon-left.png" />
     <Content Include="Content\images\icon-right.png" />
+    <Content Include="Content\images\user-unnamed.ico" />
     <Content Include="Content\jqx.base.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

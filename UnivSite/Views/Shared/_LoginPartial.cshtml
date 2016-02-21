@@ -7,7 +7,9 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            @Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            <a href='@Url.Action("Index", "Manage",  routeValues: null)'>
+                <img src='@Url.Content("~/Content/images/user-unnamed.ico")' style="width: 30px; height: 30px;" />
+            </a>
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Sing out</a></li>
     </ul>
