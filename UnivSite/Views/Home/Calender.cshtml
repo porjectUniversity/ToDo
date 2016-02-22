@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Calender";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/jqx.base.css")
+
+@section Scripts {
+    @Scripts.Render("~/scripts/jquery-1.11.1.min.js")
+    @Scripts.Render("~/scripts/jqxcore.js")
+    @Scripts.Render("~/scripts/jqxdatetimeinput.js")
+    @Scripts.Render("~/scripts/jqxcalendar.js")
+    @Scripts.Render("~/scripts/globalize.js")
+    @Scripts.Render("~/scripts/action.calendar.js")
+}
+
+
+<div class="row">
+    @Html.Partial("_LeftMenuPartial")
+    <div class="col-md-8" id="callendar">
+        <div id='jqxcalendar'></div>
+        <div id='log'></div>
+    </div>
+</div>
