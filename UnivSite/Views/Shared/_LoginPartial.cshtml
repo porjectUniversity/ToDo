@@ -11,7 +11,7 @@
                 <img src='@Url.Content("~/Content/images/user-unnamed.ico")' style="width: 30px; height: 30px;" />
             </a>
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Sing out</a></li>
+        <li><a href="@Url.Action("AddNewTask", "Home",  routeValues: null)">Add task</a></li>
     </ul>
     }
 }

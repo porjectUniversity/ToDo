@@ -206,6 +206,8 @@
     <Compile Include="Models\ApplicationManager.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Tasks.cs" />
+    <Compile Include="Models\TasksContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -287,6 +289,8 @@
     <Content Include="Views\Home\Lists.cshtml" />
     <Content Include="Views\Home\Goals.cshtml" />
     <Content Include="Views\Home\Achievements.cshtml" />
+    <Content Include="Views\Shared\_LeftMenuPartial.cshtml" />
+    <Content Include="Views\Home\AddNewTask.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

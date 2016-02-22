@@ -10,6 +10,8 @@ namespace UnivSite.Controllers
     [RequireHttps]
     public class HomeController : Controller
     {
+        TasksContext taskDb = new TasksContext();
+
         public ActionResult Index()
         {
             return View();
@@ -33,6 +35,24 @@ namespace UnivSite.Controllers
         public ActionResult Achievements()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddNewTask()
+        {
+            var types = new SelectList(new List<string> {"Tasks" , "Events", "Appointmens", "Notes"});
+            ViewBag.Type = types;
+        
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddNewTask(Tasks task)
+        {
+            // saved
+            taskDb.tasks.Add(task);
+            taskDb.SaveChanges();
+
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
     }
 }
