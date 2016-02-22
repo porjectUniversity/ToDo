@@ -25,3 +25,17 @@ textarea {
 #callendar {
     margin-top: 20px;
 }
+#left-menu {
+    width: 300px;
+    height: 602px;
+    border: 1px solid #000000;
+    overflow: auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+.main-up {
+    border-bottom: 1px solid #000000;
+}
+.main-up h2, .main-up h4{
+   text-align: center;
+}
