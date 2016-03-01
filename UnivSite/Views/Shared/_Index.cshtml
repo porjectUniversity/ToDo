@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="responsive-menu">
                 <form action="" class="navbar-form navbar-right">
                     <div class="form-group">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav menu">
 
                             <li><input type="text" class="form-control" placeholder="E-mail"></li>
                             <li><input type="text" class="form-control" placeholder="Password"/></li>
@@ -45,7 +45,10 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year </p>
+            <div class="container">
+                <p>&copy; @DateTime.Now.Year </p>
+            </div>
+            
         </footer>
     </div>
 
