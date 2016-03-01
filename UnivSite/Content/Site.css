@@ -111,5 +111,10 @@ input {
 }
 
 .btn-success {
-    background-color: #2E3983;
+    background-color: #707ED7;
+    border-color: #707ED7;
+}
+
+.btn-success :hover {
+    background-color: #707ED7;
 }
